@@ -1,0 +1,23 @@
+<div class="result-card">
+
+  <h2 class="result-title">✨ Generated Post</h2>
+
+  <!-- Hooks -->
+  <h3 class="section-title">🔥 Hooks</h3>
+  <ul class="hooks-list">
+    <li *ngFor="let h of result.hooks">{{ h }}</li>
+  </ul>
+
+  <!-- Caption -->
+  <h3 class="section-title">📝 Caption</h3>
+  <div class="caption-box">
+    {{ result.caption }}
+  </div>
+
+  <!-- Image Prompt -->
+  <h3 class="section-title">🎨 Image Prompt</h3>
+  <div class="image-box">
+    {{ result.imagePrompt }}
+  </div>
+
+</div>

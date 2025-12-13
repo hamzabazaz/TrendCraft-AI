@@ -1,0 +1,49 @@
+<div class="page-container">
+
+  <!-- Title Section -->
+  <h1 class="app-title">✨ TrendCraft AI</h1>
+  <h4 class="subtitle">Transforming today's news into tomorrow's viral content.</h4>
+
+
+  <!-- Search Section -->
+  <div class="search-section">
+    <input
+      type="text"
+      class="topic-input"
+      placeholder="Search trending topics…"
+      [(ngModel)]="topic"
+    />
+
+    <button class="fetch-btn" (click)="fetchArticles()">
+      🔍 Fetch Articles
+    </button>
+  </div>
+
+  <!-- Loading Indicator -->
+  <div *ngIf="loading" class="loading-container">
+    <div class="loader"></div>
+    <p>Fetching fresh news for you…</p>
+  </div>
+
+  <!-- Article Cards -->
+  <app-article-list
+    *ngIf="!loading && articles.length > 0"
+    [articles]="articles"
+    (toggle)="toggleSelect($event)">
+  </app-article-list>
+
+  <!-- Generate Button -->
+  <button
+    class="generate-btn"
+    (click)="generate()"
+    [disabled]="disableGenerate">
+    🚀 Generate Post
+  </button>
+
+  <!-- Generated Post -->
+  <app-generate-result
+    *ngIf="result"
+    [result]="result">
+  </app-generate-result>
+
+</div>

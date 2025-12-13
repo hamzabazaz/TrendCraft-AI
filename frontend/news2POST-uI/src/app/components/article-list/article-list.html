@@ -1,0 +1,18 @@
+<div class="articles-grid">
+  <div
+    class="article-card"
+    *ngFor="let a of articles"
+    [class.selected]="a.selected"
+    (click)="onToggle(a)"
+  >
+
+    <div class="card-header">
+      <span class="source">{{ a.source }}</span>
+      <span class="selected-badge" *ngIf="a.selected">✔ Selected</span>
+    </div>
+
+    <h3 class="title">{{ a.title }}</h3>
+
+    <p class="snippet">{{ a.snippet }}</p>
+  </div>
+</div>
