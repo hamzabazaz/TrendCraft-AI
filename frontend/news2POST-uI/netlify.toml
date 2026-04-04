@@ -1,3 +1,8 @@
+[build]
+  base = "frontend/news2POST-ul"
+  command = "npm install && npm run build"
+  publish = "dist/news2post-ui"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
