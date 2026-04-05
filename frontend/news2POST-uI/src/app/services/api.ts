@@ -18,14 +18,14 @@ export class Api {
   fetchArticles(topic: string): Observable<{ topic: string; articles: Article[] }> {
     const params = new HttpParams().set('topic', topic);
     return this.http.get<{ topic: string; articles: Article[] }>(
-      `${this.baseUrl}/articles`,
+      `${this.baseUrl}/api/articles`,
       { params }
     );
   }
 
   generatePost(payload: GenerateRequest): Observable<GenerateResponse> {
     return this.http.post<GenerateResponse>(
-      `${this.baseUrl}/generate`,
+      `${this.baseUrl}/api/generate`,
       payload
     );
   }
