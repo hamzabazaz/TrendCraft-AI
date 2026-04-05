@@ -1,6 +1,6 @@
 [build]
   command = "npm install && npm run build"
-  publish = "dist/news2post-ui"
+  publish = "dist/news2post-ui/browser"
 
 [[redirects]]
   from = "/*"
