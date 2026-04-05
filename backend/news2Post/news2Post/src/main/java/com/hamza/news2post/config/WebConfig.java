@@ -9,7 +9,9 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("trendcraft-ai.netlify.app")  // allow all (quick fix)
+                .allowedOrigins("http://localhost:4200",
+                	    "https://trendcraft-ai.netlify.app"
+)  // 
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*");
     }
